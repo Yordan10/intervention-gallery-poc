@@ -1,0 +1,1322 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "name": "LEVEND BAMBOE"
+        },
+        {
+            "id": 1,
+            "name": "BLADVERLIEZEND GROEN OP HET OOSTEN"
+        },
+        {
+            "id": 2,
+            "name": "BLOEIENDE BERM"
+        },
+        {
+            "id": 3,
+            "name": "BOMEN (INHEEMS)"
+        },
+        {
+            "id": 4,
+            "name": "BOVENGRONDSE AFWATERING"
+        },
+        {
+            "id": 5,
+            "name": "BRUIN DAK"
+        },
+        {
+            "id": 6,
+            "name": "DIEPE INFILTRATIE"
+        },
+        {
+            "id": 7,
+            "name": "DIERVRIENDELIJKE VERLICHTING"
+        },
+        {
+            "id": 8,
+            "name": "EXTENSIEF GROENDAK (SEDUMDAK)"
+        },
+        {
+            "id": 9,
+            "name": "GEVELTUIN"
+        },
+        {
+            "id": 10,
+            "name": "GRIJSWATERCIRCUIT"
+        },
+        {
+            "id": 11,
+            "name": "GRASKRUIDENDAK"
+        },
+        {
+            "id": 12,
+            "name": "GRASBETONTEGEL"
+        },
+        {
+            "id": 13,
+            "name": "GREPPEL"
+        },
+        {
+            "id": 14,
+            "name": "GRINDKOFFER"
+        },
+        {
+            "id": 15,
+            "name": "GROENE GEVEL"
+        },
+        {
+            "id": 16,
+            "name": "HAGEN (INHEEMS)"
+        },
+        {
+            "id": 17,
+            "name": "BESDRAGENDE HEEMSTER (INHEEMS)"
+        },
+        {
+            "id": 18,
+            "name": "HELOFYTENFILTER"
+        },
+        {
+            "id": 19,
+            "name": "INFILTRATIEVELD"
+        },
+        {
+            "id": 20,
+            "name": "INSECTENHOTEL"
+        },
+        {
+            "id": 21,
+            "name": "INTENSIEF GROENDAK"
+        },
+        {
+            "id": 22,
+            "name": "KLIMPLANTEN INHEEMS"
+        },
+        {
+            "id": 23,
+            "name": "LICHTE EN DONKERE GEVELS"
+        },
+        {
+            "id": 24,
+            "name": "WADI"
+        },
+        {
+            "id": 25,
+            "name": "NATUURLIJKE VERHARDING"
+        },
+        {
+            "id": 26,
+            "name": "NATUURLIJKE ZONWERING"
+        },
+        {
+            "id": 27,
+            "name": "NESTDAKPAN"
+        },
+        {
+            "id": 28,
+            "name": "NETWERK VAN GROEN"
+        },
+        {
+            "id": 29,
+            "name": "PLUKTUIN"
+        },
+        {
+            "id": 30,
+            "name": "POLDERDAK (WATERRETENTIE)"
+        },
+        {
+            "id": 31,
+            "name": "REGENTON"
+        },
+        {
+            "id": 32,
+            "name": "REGENWATERSCHUTTING"
+        },
+        {
+            "id": 33,
+            "name": "RETENTIEKRAT"
+        },
+        {
+            "id": 34,
+            "name": "SCHELPENBAK OP HET DAK"
+        },
+        {
+            "id": 35,
+            "name": "VASTE PLANTEN"
+        },
+        {
+            "id": 36,
+            "name": "VIJVER"
+        },
+        {
+            "id": 37,
+            "name": "VLEERMUISHOK"
+        },
+        {
+            "id": 38,
+            "name": "VOGELHUISJE"
+        },
+        {
+            "id": 39,
+            "name": "WATERBRIEVENBUS"
+        },
+        {
+            "id": 40,
+            "name": "WATERDAK"
+        },
+        {
+            "id": 41,
+            "name": "WATERTOREN"
+        },
+        {
+            "id": 42,
+            "name": "WATERZAK ONDER DE WONING"
+        },
+        {
+            "id": 43,
+            "name": "WILDE BLOEMEN"
+        },
+        {
+            "id": 44,
+            "name": "SCHADUWDOEK"
+        },
+        {
+            "id": 45,
+            "name": "WATERSPROEI INSTALLATIE HEMELWATER"
+        },
+        {
+            "id": 46,
+            "name": "LUCHTFILTERS"
+        },
+        {
+            "id": 47,
+            "name": "ONDERGRONDSE DRAINAGEBUIS"
+        },
+        {
+            "id": 48,
+            "name": "GRASBERM (NIET BLOEIEND)"
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 13,
+            "reltype": "synergy"
+        },
+        {
+            "source": 0,
+            "target": 24,
+            "reltype": "synergy"
+        },
+        {
+            "source": 0,
+            "target": 36,
+            "reltype": "synergy"
+        },
+        {
+            "source": 1,
+            "target": 15,
+            "reltype": "synergy"
+        },
+        {
+            "source": 1,
+            "target": 26,
+            "reltype": "synergy"
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 2,
+            "target": 16,
+            "reltype": "synergy"
+        },
+        {
+            "source": 2,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 2,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 2,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 7,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 16,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 17,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 27,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 35,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 36,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 37,
+            "reltype": "synergy"
+        },
+        {
+            "source": 3,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 4,
+            "target": 12,
+            "reltype": "synergy"
+        },
+        {
+            "source": 4,
+            "target": 13,
+            "reltype": "synergy"
+        },
+        {
+            "source": 4,
+            "target": 14,
+            "reltype": "synergy"
+        },
+        {
+            "source": 4,
+            "target": 19,
+            "reltype": "synergy"
+        },
+        {
+            "source": 4,
+            "target": 24,
+            "reltype": "synergy"
+        },
+        {
+            "source": 4,
+            "target": 36,
+            "reltype": "synergy"
+        },
+        {
+            "source": 5,
+            "target": 14,
+            "reltype": "synergy"
+        },
+        {
+            "source": 5,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 5,
+            "target": 24,
+            "reltype": "synergy"
+        },
+        {
+            "source": 5,
+            "target": 31,
+            "reltype": "synergy"
+        },
+        {
+            "source": 5,
+            "target": 34,
+            "reltype": "synergy"
+        },
+        {
+            "source": 7,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 7,
+            "target": 16,
+            "reltype": "synergy"
+        },
+        {
+            "source": 7,
+            "target": 17,
+            "reltype": "synergy"
+        },
+        {
+            "source": 7,
+            "target": 37,
+            "reltype": "synergy"
+        },
+        {
+            "source": 7,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 8,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 8,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 8,
+            "target": 31,
+            "reltype": "synergy"
+        },
+        {
+            "source": 8,
+            "target": 32,
+            "reltype": "synergy"
+        },
+        {
+            "source": 8,
+            "target": 34,
+            "reltype": "synergy"
+        },
+        {
+            "source": 8,
+            "target": 39,
+            "reltype": "synergy"
+        },
+        {
+            "source": 9,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 9,
+            "target": 22,
+            "reltype": "synergy"
+        },
+        {
+            "source": 9,
+            "target": 26,
+            "reltype": "synergy"
+        },
+        {
+            "source": 9,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 9,
+            "target": 31,
+            "reltype": "synergy"
+        },
+        {
+            "source": 10,
+            "target": 30,
+            "reltype": "synergy"
+        },
+        {
+            "source": 10,
+            "target": 42,
+            "reltype": "synergy"
+        },
+        {
+            "source": 11,
+            "target": 15,
+            "reltype": "synergy"
+        },
+        {
+            "source": 11,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 11,
+            "target": 34,
+            "reltype": "synergy"
+        },
+        {
+            "source": 11,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 11,
+            "target": 39,
+            "reltype": "synergy"
+        },
+        {
+            "source": 12,
+            "target": 4,
+            "reltype": "synergy"
+        },
+        {
+            "source": 12,
+            "target": 39,
+            "reltype": "synergy"
+        },
+        {
+            "source": 13,
+            "target": 0,
+            "reltype": "synergy"
+        },
+        {
+            "source": 13,
+            "target": 4,
+            "reltype": "synergy"
+        },
+        {
+            "source": 13,
+            "target": 17,
+            "reltype": "synergy"
+        },
+        {
+            "source": 13,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 14,
+            "target": 4,
+            "reltype": "synergy"
+        },
+        {
+            "source": 14,
+            "target": 5,
+            "reltype": "synergy"
+        },
+        {
+            "source": 15,
+            "target": 1,
+            "reltype": "synergy"
+        },
+        {
+            "source": 15,
+            "target": 11,
+            "reltype": "synergy"
+        },
+        {
+            "source": 15,
+            "target": 17,
+            "reltype": "synergy"
+        },
+        {
+            "source": 15,
+            "target": 22,
+            "reltype": "synergy"
+        },
+        {
+            "source": 15,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 15,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 16,
+            "target": 2,
+            "reltype": "synergy"
+        },
+        {
+            "source": 16,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 16,
+            "target": 7,
+            "reltype": "synergy"
+        },
+        {
+            "source": 16,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 16,
+            "target": 27,
+            "reltype": "synergy"
+        },
+        {
+            "source": 16,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 16,
+            "target": 37,
+            "reltype": "synergy"
+        },
+        {
+            "source": 16,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 16,
+            "target": 48,
+            "reltype": "synergy"
+        },
+        {
+            "source": 17,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 17,
+            "target": 7,
+            "reltype": "synergy"
+        },
+        {
+            "source": 17,
+            "target": 13,
+            "reltype": "synergy"
+        },
+        {
+            "source": 17,
+            "target": 15,
+            "reltype": "synergy"
+        },
+        {
+            "source": 17,
+            "target": 21,
+            "reltype": "synergy"
+        },
+        {
+            "source": 17,
+            "target": 27,
+            "reltype": "synergy"
+        },
+        {
+            "source": 17,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 17,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 18,
+            "target": 30,
+            "reltype": "synergy"
+        },
+        {
+            "source": 18,
+            "target": 36,
+            "reltype": "synergy"
+        },
+        {
+            "source": 19,
+            "target": 4,
+            "reltype": "synergy"
+        },
+        {
+            "source": 19,
+            "target": 25,
+            "reltype": "synergy"
+        },
+        {
+            "source": 19,
+            "target": 33,
+            "reltype": "synergy"
+        },
+        {
+            "source": 19,
+            "target": 35,
+            "reltype": "synergy"
+        },
+        {
+            "source": 19,
+            "target": 39,
+            "reltype": "synergy"
+        },
+        {
+            "source": 19,
+            "target": 43,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 2,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 5,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 8,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 9,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 11,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 16,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 21,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 29,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 30,
+            "reltype": "synergy"
+        },
+        {
+            "source": 20,
+            "target": 43,
+            "reltype": "synergy"
+        },
+        {
+            "source": 21,
+            "target": 17,
+            "reltype": "synergy"
+        },
+        {
+            "source": 21,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 21,
+            "target": 26,
+            "reltype": "synergy"
+        },
+        {
+            "source": 21,
+            "target": 31,
+            "reltype": "synergy"
+        },
+        {
+            "source": 21,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 21,
+            "target": 41,
+            "reltype": "synergy"
+        },
+        {
+            "source": 22,
+            "target": 9,
+            "reltype": "synergy"
+        },
+        {
+            "source": 22,
+            "target": 15,
+            "reltype": "synergy"
+        },
+        {
+            "source": 22,
+            "target": 26,
+            "reltype": "synergy"
+        },
+        {
+            "source": 22,
+            "target": 27,
+            "reltype": "synergy"
+        },
+        {
+            "source": 22,
+            "target": 32,
+            "reltype": "synergy"
+        },
+        {
+            "source": 22,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 24,
+            "target": 0,
+            "reltype": "synergy"
+        },
+        {
+            "source": 24,
+            "target": 4,
+            "reltype": "synergy"
+        },
+        {
+            "source": 24,
+            "target": 5,
+            "reltype": "synergy"
+        },
+        {
+            "source": 24,
+            "target": 33,
+            "reltype": "synergy"
+        },
+        {
+            "source": 25,
+            "target": 19,
+            "reltype": "synergy"
+        },
+        {
+            "source": 25,
+            "target": 33,
+            "reltype": "synergy"
+        },
+        {
+            "source": 26,
+            "target": 1,
+            "reltype": "synergy"
+        },
+        {
+            "source": 26,
+            "target": 9,
+            "reltype": "synergy"
+        },
+        {
+            "source": 26,
+            "target": 21,
+            "reltype": "synergy"
+        },
+        {
+            "source": 26,
+            "target": 22,
+            "reltype": "synergy"
+        },
+        {
+            "source": 26,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 26,
+            "target": 40,
+            "reltype": "synergy"
+        },
+        {
+            "source": 27,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 27,
+            "target": 16,
+            "reltype": "synergy"
+        },
+        {
+            "source": 27,
+            "target": 17,
+            "reltype": "synergy"
+        },
+        {
+            "source": 27,
+            "target": 22,
+            "reltype": "synergy"
+        },
+        {
+            "source": 27,
+            "target": 35,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 2,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 8,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 9,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 13,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 15,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 16,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 17,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 36,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 37,
+            "reltype": "synergy"
+        },
+        {
+            "source": 28,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 29,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 29,
+            "target": 31,
+            "reltype": "synergy"
+        },
+        {
+            "source": 29,
+            "target": 41,
+            "reltype": "synergy"
+        },
+        {
+            "source": 29,
+            "target": 42,
+            "reltype": "synergy"
+        },
+        {
+            "source": 30,
+            "target": 10,
+            "reltype": "synergy"
+        },
+        {
+            "source": 30,
+            "target": 18,
+            "reltype": "synergy"
+        },
+        {
+            "source": 30,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 30,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 30,
+            "target": 45,
+            "reltype": "synergy"
+        },
+        {
+            "source": 31,
+            "target": 5,
+            "reltype": "synergy"
+        },
+        {
+            "source": 31,
+            "target": 8,
+            "reltype": "synergy"
+        },
+        {
+            "source": 31,
+            "target": 9,
+            "reltype": "synergy"
+        },
+        {
+            "source": 31,
+            "target": 21,
+            "reltype": "synergy"
+        },
+        {
+            "source": 31,
+            "target": 29,
+            "reltype": "synergy"
+        },
+        {
+            "source": 31,
+            "target": 35,
+            "reltype": "synergy"
+        },
+        {
+            "source": 31,
+            "target": 45,
+            "reltype": "synergy"
+        },
+        {
+            "source": 32,
+            "target": 8,
+            "reltype": "synergy"
+        },
+        {
+            "source": 32,
+            "target": 22,
+            "reltype": "synergy"
+        },
+        {
+            "source": 32,
+            "target": 40,
+            "reltype": "synergy"
+        },
+        {
+            "source": 32,
+            "target": 43,
+            "reltype": "synergy"
+        },
+        {
+            "source": 32,
+            "target": 45,
+            "reltype": "synergy"
+        },
+        {
+            "source": 33,
+            "target": 19,
+            "reltype": "synergy"
+        },
+        {
+            "source": 33,
+            "target": 24,
+            "reltype": "synergy"
+        },
+        {
+            "source": 33,
+            "target": 25,
+            "reltype": "synergy"
+        },
+        {
+            "source": 34,
+            "target": 5,
+            "reltype": "synergy"
+        },
+        {
+            "source": 34,
+            "target": 8,
+            "reltype": "synergy"
+        },
+        {
+            "source": 34,
+            "target": 11,
+            "reltype": "synergy"
+        },
+        {
+            "source": 35,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 35,
+            "target": 19,
+            "reltype": "synergy"
+        },
+        {
+            "source": 35,
+            "target": 27,
+            "reltype": "synergy"
+        },
+        {
+            "source": 35,
+            "target": 31,
+            "reltype": "synergy"
+        },
+        {
+            "source": 35,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 35,
+            "target": 41,
+            "reltype": "synergy"
+        },
+        {
+            "source": 36,
+            "target": 0,
+            "reltype": "synergy"
+        },
+        {
+            "source": 36,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 36,
+            "target": 4,
+            "reltype": "synergy"
+        },
+        {
+            "source": 36,
+            "target": 18,
+            "reltype": "synergy"
+        },
+        {
+            "source": 36,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 36,
+            "target": 37,
+            "reltype": "synergy"
+        },
+        {
+            "source": 36,
+            "target": 38,
+            "reltype": "synergy"
+        },
+        {
+            "source": 37,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 37,
+            "target": 7,
+            "reltype": "synergy"
+        },
+        {
+            "source": 37,
+            "target": 16,
+            "reltype": "synergy"
+        },
+        {
+            "source": 37,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 37,
+            "target": 36,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 3,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 7,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 11,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 15,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 16,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 17,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 21,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 22,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 26,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 28,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 30,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 35,
+            "reltype": "synergy"
+        },
+        {
+            "source": 38,
+            "target": 36,
+            "reltype": "synergy"
+        },
+        {
+            "source": 39,
+            "target": 8,
+            "reltype": "synergy"
+        },
+        {
+            "source": 39,
+            "target": 11,
+            "reltype": "synergy"
+        },
+        {
+            "source": 39,
+            "target": 12,
+            "reltype": "synergy"
+        },
+        {
+            "source": 39,
+            "target": 19,
+            "reltype": "synergy"
+        },
+        {
+            "source": 39,
+            "target": 40,
+            "reltype": "synergy"
+        },
+        {
+            "source": 40,
+            "target": 26,
+            "reltype": "synergy"
+        },
+        {
+            "source": 40,
+            "target": 32,
+            "reltype": "synergy"
+        },
+        {
+            "source": 40,
+            "target": 39,
+            "reltype": "synergy"
+        },
+        {
+            "source": 41,
+            "target": 21,
+            "reltype": "synergy"
+        },
+        {
+            "source": 41,
+            "target": 29,
+            "reltype": "synergy"
+        },
+        {
+            "source": 41,
+            "target": 35,
+            "reltype": "synergy"
+        },
+        {
+            "source": 41,
+            "target": 45,
+            "reltype": "synergy"
+        },
+        {
+            "source": 42,
+            "target": 10,
+            "reltype": "synergy"
+        },
+        {
+            "source": 42,
+            "target": 29,
+            "reltype": "synergy"
+        },
+        {
+            "source": 42,
+            "target": 45,
+            "reltype": "synergy"
+        },
+        {
+            "source": 43,
+            "target": 19,
+            "reltype": "synergy"
+        },
+        {
+            "source": 43,
+            "target": 20,
+            "reltype": "synergy"
+        },
+        {
+            "source": 43,
+            "target": 32,
+            "reltype": "synergy"
+        },
+        {
+            "source": 45,
+            "target": 30,
+            "reltype": "synergy"
+        },
+        {
+            "source": 45,
+            "target": 31,
+            "reltype": "synergy"
+        },
+        {
+            "source": 45,
+            "target": 32,
+            "reltype": "synergy"
+        },
+        {
+            "source": 45,
+            "target": 41,
+            "reltype": "synergy"
+        },
+        {
+            "source": 45,
+            "target": 42,
+            "reltype": "synergy"
+        },
+        {
+            "source": 48,
+            "target": 16,
+            "reltype": "synergy"
+        }
+    ]
+}
