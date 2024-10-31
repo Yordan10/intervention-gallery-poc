@@ -1,170 +1,216 @@
 <template>
-    <div>
-      <div ref="cy" class="cy-container"></div>
-      <div v-if="selectedNode" class="info-panel">
-        <h3>{{ selectedNode.label }}</h3>
-        <p>More details about the intervention could go here.</p>
-        <p>Related Interventions:</p>
-        <ul>
-          <li v-for="related in relatedNodes" :key="related.id">
-            {{ related.label }}
-          </li>
-        </ul>
-        <button @click="clearSelection">Close</button>
-      </div>
+  <div style="position: relative">
+    <div ref="graph" class="graph-container"></div>
+    <div v-if="selectedNode" class="info-panel">
+      <h3>
+        {{ selectedNode.label || selectedNode.name || "No Node Selected" }}
+      </h3>
+      <p>More details about the intervention could go here.</p>
+      <p>Related Interventions:</p>
+      <ul>
+        <li v-for="related in relatedNodes" :key="related.id">
+          {{ related.label || related.name }}
+        </li>
+      </ul>
+      <button @click="clearSelection">Close</button>
     </div>
-  </template>
-  
-  <script>
-  import cytoscape from 'cytoscape';
-  
-  export default {
-    props: {
-      nodes: Array,
-      links: Array
-    },
-    data() {
-      return {
-        cy: null,
-        selectedNode: null,
-        relatedNodes: []
-      };
-    },
-    mounted() {
-      this.initCytoscape();
-    },
-    methods: {
-      initCytoscape() {
-        const elements = [
-          ...this.nodes.map(node => ({ data: { id: node.id, label: node.name } })),
-          ...this.links.map(link => ({
-            data: { source: link.source, target: link.target, reltype: link.reltype }
-          }))
-        ];
-  
-        this.cy = cytoscape({
-          container: this.$refs.cy,
-          elements,
-          style: [
-            {
-              selector: 'node',
-              style: {
-                'label': 'data(label)',
-                'background-color': '#2d6187',
-                'color': '#fff',
-                'text-valign': 'center',
-                'text-halign': 'center',
-                'width': 20,
-                'height': 20,
-                'font-size': 12,
-                'border-width': 3,
-                'border-color': '#5f8aa6',
-              }
-            },
-            {
-              selector: 'edge',
-              style: {
-                'line-color': '#9ecae1',
-                'width': 2,
-                'target-arrow-color': '#9ecae1',
-                'target-arrow-shape': 'triangle'
-              }
-            }
-          ],
-          layout: {
-            name: 'cose',
-            padding: 10
-          }
-        });
-  
-        this.cy.on('tap', 'node', (event) => {
-          this.selectNode(event.target);
-        });
-      },
-      selectNode(node) {
-        // Clear previous highlights
-        this.cy.nodes().removeClass('dim');
-        this.cy.edges().removeClass('highlight');
-  
-        // Highlight selected node and related nodes
-        this.selectedNode = node.data();
-        const relatedEdges = node.connectedEdges();
-        relatedEdges.addClass('highlight');
-        
-        // Dim all nodes, then highlight the selected node and its neighbors
-        this.cy.nodes().addClass('dim');
-        node.removeClass('dim');
-        node.neighborhood().removeClass('dim');
-  
-        // Gather related nodes information for display
-        this.relatedNodes = node.neighborhood('node').map(n => n.data());
-      },
-      clearSelection() {
-        this.selectedNode = null;
-        this.relatedNodes = [];
-        this.cy.nodes().removeClass('dim');
-        this.cy.edges().removeClass('highlight');
+  </div>
+</template>
+
+<script>
+import * as d3 from "d3";
+
+export default {
+  props: {
+    nodes: Array,
+    links: Array,
+  },
+  data() {
+    return {
+      selectedNode: null,
+      relatedNodes: [],
+    };
+  },
+  mounted() {
+    this.initD3();
+  },
+  watch: {
+    nodes: "initD3",
+    links: "initD3",
+  },
+  methods: {
+    initD3() {
+      d3.select(this.$refs.graph).select("svg").remove(); // Clear previous SVG
+
+      const nodes = this.nodes || []; // Fallback if nodes is undefined
+      const links = this.links || []; // Fallback if links is undefined
+
+      if (links.length === 0) {
+        console.warn("No links available to display.");
+      }
+
+      const width =
+        this.$refs.graph.clientWidth > 50 ? this.$refs.graph.clientWidth : 800;
+      const height =
+        this.$refs.graph.clientHeight > 50
+          ? this.$refs.graph.clientHeight
+          : 600;
+
+      const svg = d3
+        .select(this.$refs.graph)
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .style("border", "1px solid #ddd");
+
+      const simulation = d3
+        .forceSimulation(nodes)
+        .force(
+          "link",
+          d3
+            .forceLink(links)
+            .id((d) => d.id)
+            .distance(100)
+        )
+        .force("charge", d3.forceManyBody().strength(-300))
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .force("collide", d3.forceCollide().radius(50));
+
+      const link = svg
+        .append("g")
+        .attr("class", "links")
+        .selectAll("line")
+        .data(links)
+        .enter()
+        .append("line")
+        .attr("stroke-width", 2)
+        .attr("stroke", "#9ecae1");
+
+      const node = svg
+        .append("g")
+        .attr("class", "nodes")
+        .selectAll("circle")
+        .data(nodes)
+        .enter()
+        .append("circle")
+        .attr("r", 15)
+        .attr("fill", "#2d6187")
+        .call(
+          d3
+            .drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+        )
+        .on("click", (event, d) => this.selectNode(d));
+
+      node.append("title").text((d) => d.name);
+
+      const label = svg
+        .append("g")
+        .attr("class", "labels")
+        .selectAll("text")
+        .data(nodes)
+        .enter()
+        .append("text")
+        .attr("dy", -20)
+        .attr("text-anchor", "middle")
+        .attr("font-size", 12)
+        .attr("fill", "#333")
+        .text((d) => d.name);
+
+      simulation.on("tick", () => {
+        link
+          .attr("x1", (d) => d.source.x)
+          .attr("y1", (d) => d.source.y)
+          .attr("x2", (d) => d.target.x)
+          .attr("y2", (d) => d.target.y);
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+        label.attr("x", (d) => d.x).attr("y", (d) => d.y);
+      });
+
+      function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      }
+
+      function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+      }
+
+      function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
       }
     },
-    beforeUnmount() {
-      if (this.cy) this.cy.destroy();
-    }
-  };
-  </script>
-  
-  <style scoped>
-  .cy-container {
-    width: 100%;
-    height: 500px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-top: 20px;
-    background-color: #fafafa;
-  }
-  
-  .info-panel {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 250px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-  }
-  
-  .info-panel h3 {
-    font-size: 1.2em;
-    color: #2d6187;
-    margin-bottom: 10px;
-  }
-  
-  .info-panel ul {
-    padding-left: 15px;
-  }
-  
-  .info-panel button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #2d6187;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .info-panel button:hover {
-    background-color: #4a90a6;
-  }
-  
-  .dim {
-    opacity: 0.3;
-  }
-  
-  .highlight {
-    line-color: #f39c12 !important;
-    width: 4px;
-  }
-  </style>
-  
+    selectNode(node) {
+      this.selectedNode = node;
+      this.relatedNodes = this.links
+        .filter(
+          (link) => link.source.id === node.id || link.target.id === node.id
+        )
+        .map((link) =>
+          link.source.id === node.id ? link.target : link.source
+        );
+    },
+    clearSelection() {
+      this.selectedNode = null;
+      this.relatedNodes = [];
+    },
+  },
+};
+</script>
+
+<style scoped>
+.graph-container {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #fafafa;
+}
+
+.info-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.info-panel h3 {
+  font-size: 1.2em;
+  color: #2d6187;
+  margin-bottom: 10px;
+}
+
+.info-panel ul {
+  padding-left: 15px;
+}
+
+.info-panel button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #2d6187;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.info-panel button:hover {
+  background-color: #4a90a6;
+}
+</style>
